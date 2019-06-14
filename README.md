@@ -28,9 +28,22 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the differences between `client-side routing` and `server-side routing`.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
-- [ ] Mention three tools we can use to make AJAX requests.
+- [x] Explain the differences between `client-side routing` and `server-side routing`.
+
+  - Server side routing includes a refresh when the server finishes a request.  This is good because the server will only give us the info requested, no more and no less. It's bad because refreshes/dom manipulation take time.
+  -Another downside to server-side is that when a lot of information is being requested, it has a lot of protocols to run through, and this could also take a while. 
+  -Client side handles routing internally using JS. This prevents refreshes because the page already has all the info, it just only shows what it needs to. This means no refreshing and faster pages. 
+
+- [x] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+  - C (create) --> post
+  - R (read) --> get
+  - U (update) --> put
+  - D (delete) --> delete
+
+- [x] Mention three tools we can use to make AJAX requests.
+
+  -fetch, axios, jquery
 
 
 ## Project Set Up
@@ -53,9 +66,9 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Add your Project Manager as a Reviewer on the Pull-request
+- [x] PM then will count the HW as done by  merging the branch back into master.
 ## Minimum Viable Product
 
 The MVP of this project will be broken up between 2 stages. Follow each step and be sure to use your design/style skills to make this application look professional.
