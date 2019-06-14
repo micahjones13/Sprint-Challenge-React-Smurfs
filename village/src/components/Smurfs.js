@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Smurf from './Smurf';
 
@@ -16,10 +17,14 @@ class Smurfs extends Component {
                 age={smurf.age}
                 height={smurf.height}
                 key={smurf.id}
+                deleteSmurf = {this.props.deleteSmurf}
+                setUpdateForm = {this.props.setUpdateForm}
+                smurf = {smurf}
               />
             );
           })}
         </ul>
+        <Link to = '/smurf-form'><div>Add A Smurf!</div></Link>
       </div>
     );
   }
