@@ -33,7 +33,6 @@ const Smurf = props => {
       <h3>{props.name}</h3>
       <strong>{props.height} tall</strong>
       <p>{props.age} smurf years old</p>
-      <p>{props.id} id</p>
       <StyledButton onClick = {e => props.deleteSmurf(e, props.id)}>Delete Smurf</StyledButton>
       <StyledButton onClick = {e => props.setUpdateForm(e, props.smurf)}>Update Smurf</StyledButton>
     </SmurfDiv>
