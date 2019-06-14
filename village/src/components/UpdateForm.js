@@ -1,4 +1,40 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const FormStyled = styled.div`
+  form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      
+
+     
+      padding: 1%;
+  }
+  input{
+      width: 20%;
+      padding: 1%;
+      margin: 4px 0;
+      border-color: darkblue;
+  }
+`;
+const StyledButton = styled.button`
+  width: 10%
+  background: hotpink;
+  color: #5500cc;
+  height: 50px;
+  margin: 4px 0;
+
+  &:hover{
+      background: #5500cc;
+      color: hotpink;
+  }
+ 
+  
+`;
+
+
 
 class UpdateForm extends React.Component {
     state= {
@@ -22,7 +58,7 @@ class UpdateForm extends React.Component {
 
     render(){
         return(
-            <div className="UpdateForm">
+            <FormStyled>
             <form onSubmit={this.handleSubmit}>
               <input
                 onChange={this.handleInputChange}
@@ -42,14 +78,14 @@ class UpdateForm extends React.Component {
                 value={this.state.smurf.height}
                 name="height"
               />
-              <button type="submit">Add to the village</button>
+              <StyledButton type="submit">Update Smurf</StyledButton>
             </form>
             
             
             
             
             
-          </div>
+          </FormStyled>
         );
     }
 }

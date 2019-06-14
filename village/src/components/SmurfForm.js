@@ -1,5 +1,38 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const FormStyled = styled.div`
+  form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      
+
+     
+      padding: 1%;
+  }
+  input{
+      width: 20%;
+      padding: 1%;
+      margin: 4px 0;
+      border-color: darkblue;
+  }
+`;
+const StyledButton = styled.button`
+  width: 10%
+  background: hotpink;
+  color: #5500cc;
+  height: 50px;
+  margin: 4px 0;
+
+  &:hover{
+      background: #5500cc;
+      color: hotpink;
+  }
+ 
+  
+`;
 
 class SmurfForm extends Component {
   
@@ -37,7 +70,7 @@ class SmurfForm extends Component {
 
   render() {
     return (
-      <div className="SmurfForm">
+      <FormStyled>
         <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleInputChange}
@@ -57,14 +90,14 @@ class SmurfForm extends Component {
             value={this.state.smurf.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
+          <StyledButton type="submit">Add to the village</StyledButton>
         </form>
         
         
         
         
         
-      </div>
+      </FormStyled>
     );
   }
 }

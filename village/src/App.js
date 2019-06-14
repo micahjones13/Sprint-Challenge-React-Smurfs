@@ -7,6 +7,12 @@ import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 import NavBar from './components/NavBar';
 import UpdateForm from './components/UpdateForm';
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  background: lightblue;
+  text-align: center;
+`;
 
 class App extends Component {
   constructor(props) {
@@ -68,7 +74,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <StyledApp>
       
         <NavBar />
         <Route
@@ -105,7 +111,7 @@ class App extends Component {
       />
 
        
-      </div>
+      </StyledApp>
     );
   }
 }
